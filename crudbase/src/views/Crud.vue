@@ -28,7 +28,7 @@
           <td>{{user.rut}}</td>
           <td>{{user.email}}</td>
           <td>
-            <button type="button" class="btn btn-warning">Editar</button>
+            <button type="button" class="btn btn-warning" @click="editar(index)">Editar</button>
             <button type="button" class="btn btn-danger" @click="eliminar(index)">Eliminar</button>
           </td>
         </tr>
@@ -85,6 +85,9 @@ export default {
     },
     eliminar(index){
       this.users.splice(index, 1);
+    },
+    editar(index){
+      
     }
   }
 };
