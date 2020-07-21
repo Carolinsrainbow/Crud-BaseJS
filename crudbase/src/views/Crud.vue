@@ -29,7 +29,7 @@
           <td>{{user.email}}</td>
           <td>
             <button type="button" class="btn btn-warning">Editar</button>
-            <button type="button" class="btn btn-danger" @click="Eliminar(index)">Eliminar</button>
+            <button type="button" class="btn btn-danger" @click="eliminar(index)">Eliminar</button>
           </td>
         </tr>
       </tbody>
@@ -65,7 +65,7 @@ export default {
           rut: 6789789,
           email: "mauro@gmail.com"
         },
-               {
+        {
           nombre: "Angie",
           apellido: "Herrera Quevedo",
           rut: 6789789,
@@ -75,11 +75,16 @@ export default {
     };
   },
   methods: {
-    ingreso() {
-this.users.push({nombre: this.nombre, apellido: this.apellido, rut: this.rut, email: this.email})
+    ingreso(){
+      this.users.push({
+        nombre: this.nombre,
+        apellido: this.apellido,
+        rut: this.rut,
+        email: this.email
+      });
     },
     eliminar(index){
-      this.users.splice(index,1)
+      this.users.splice(index, 1);
     }
   }
 };
